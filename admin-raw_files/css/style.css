@@ -1,0 +1,187 @@
+#menu {
+    background-color: #333333 !important;
+}
+.headpart, .status-cont {
+    text-align: center;
+}
+.scoreline h4 {
+    /* font-size: 25px; */
+	padding:0;
+	margin:0;
+}
+.changestatus {
+    color: orangered;
+    cursor: pointer;
+}
+.changestatus:hover {
+	text-decoration:underline;
+	}
+.statusfrm input, .statusfrm select {
+    border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 2px 10px;
+}
+
+.add_maction {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+	background: #f2f2f2;
+    padding: 9px;
+}
+.add_maction table {
+    width: 100%;
+}
+.add_maction table input, .add_maction table select {
+    border: 1px solid gray;
+    border-radius: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-size: 13px;
+    height: inherit;
+    line-height: 17px;
+    padding: 2px 5px;
+    width: 90%;
+}
+header.navbar-header img {
+    background: #ffffff none repeat scroll 0 0;
+    padding: 2px;
+}
+
+/* .record-table {
+    text-align: center;
+}
+.record-table th{
+	text-align:center;
+} */
+.login .form-signin {
+    background-color: #fff;
+    border-radius: 3px;
+    bottom: 0;
+    height: 323px;
+    left: 0;
+    margin: auto;
+    max-width: 330px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.tab-cont {
+    display: block;
+    margin: 0 0 10px;
+    padding: 0;
+}
+.tab-cont::after, .tab-cont::before {
+    clear: both;
+    content: "";
+    display: block;
+    width: 100%;
+}
+
+.tab-cont li:last-child {
+    border-right: 1px solid #cccccc;
+}
+.tab-cont li {
+    background: #f2f2f2 none repeat scroll 0 0;
+    border-left: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    list-style: outside none none;
+    padding: 10px;
+    width: 50%;
+	cursor:pointer;
+}
+.tab-cont li.active {
+    background: #ffffff none repeat scroll 0 0;
+}
+.action-symbol{
+	height:20px;
+	width:20px;
+	display:block;
+	margin-left:50px;
+	padding:5px;
+}
+
+.action-symbol.yc{ 
+	background:url("../images/yc.png") no-repeat scroll center center;
+}
+
+.action-symbol.g{ 
+	background:url("../images/g.png") no-repeat scroll center center;
+}
+
+.action-symbol.p{ 
+	background:url("../images/p.png") no-repeat scroll center center;
+}
+
+.action-symbol.rc{ 
+	background:url("../images/rc.png") no-repeat scroll center center;
+}
+.action-symbol.st{ 
+	background:url("../images/st.gif") no-repeat scroll center center;
+}
+.action-symbol.og{ 
+	background:url("../images/og.jpg") no-repeat scroll center center;
+}
+.add_maction td {    width: 18%;}
+.action-symbol.pm{ 
+	background:url("../images/pm.png") no-repeat scroll center center;
+}
+
+.action-symbol.yr2{ 
+	background:url("../images/yr2.png") no-repeat scroll center center;
+}
+
+.cweek, .upweek {
+    border: 1px solid #cccccc;
+    line-height: 20px;
+    padding: 2px 4px;
+    width: 38px;
+}
+.upweek {
+    cursor: pointer;
+}
+.upweek:hover {
+    background: gray;
+    border: 1px solid black;
+    color: #ffffff;
+}
+.xclose {
+    background: orange none repeat scroll 0 0;
+    border-radius: 50%;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    height: 20px;
+    text-align: center;
+    width: 20px;
+	cursor:pointer;
+}
+.xclose:hover{ color: black;
+}
+.ck{ cursor:pointer; } 
+.ck:hover{
+	text-decoration:underline;
+}
+.headpart > h5 {
+    display: inline-block;
+    /* margin-right: 20px; */
+}
+.scoreline {
+    display: inline-block;
+}
+.scoreline > p {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: top;
+}
+.scoreline > h4 {
+    display: inline-block;
+    margin-right: 0;
+}
+.scoreline > span {
+    vertical-align: top;
+}.headpart {    position: relative;}.leg-status-cont.left-float {    left: 0;    position: absolute;    top: 0;    width: 220px;}.leg-status-cont.left-float table {    width: 100%;}.leg-status-cont.left-float table td {    border: 1px solid #cccccc;    padding: 4px;}.leg-status-cont.left-float th {    text-align: center;    width: 50%;}.error {    background: red none repeat scroll 0 0;    color: #ffffff;    padding: 5px;    text-align: center;}
