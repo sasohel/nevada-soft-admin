@@ -648,6 +648,9 @@ class Matchdetail_mod extends CI_Model{
 	}
 
 	public function add_match_action($info){
+                echo '<pre>';
+                var_dump($info);
+                echo '</pre>';
 		switch($info['action']){
 			case 'g':
 				
@@ -680,12 +683,26 @@ class Matchdetail_mod extends CI_Model{
 				$this->db->where('playerid', $info['player']);
 				$this->db->set('goals', 'goals+1', FALSE);
 				$this->db->update('players');
-				echo $this->db->last_query() . '<br />';
                 
 				$this->db->where('playerid', $info['assist_by']);
 				$this->db->set('assists', 'assists+1', FALSE);
 				$this->db->update('players');
-                echo $this->db->last_query() . '<br />';
+                                
+                                $sql = "SELECT hside, aside FROM `schedule` WHERE `matchid`='".$info['cmatchid']."'";
+				$sc = $this->db->query($sql);			
+				if($sc->num_rows() > 0){
+                                    $scres = $sc->result();				
+                                    if($scres[0]->hside == $info['action_for']){
+                                            $this->db->where('playerid', $info['player']);
+                                            $this->db->set('hgoals', 'hgoals+1', FALSE);
+                                            $this->db->update('players');
+                                    }
+                                    else if($scres[0]->aside == $info['action_for']){
+                                            $this->db->where('playerid', $info['player']);
+                                            $this->db->set('agoals', 'agoals+1', FALSE);
+                                            $this->db->update('players');
+                                    }					
+				}
 
 			break; 
 			case 'p':
@@ -865,8 +882,10 @@ class Matchdetail_mod extends CI_Model{
 
 		$sql = "INSERT INTO `match_details` SET `matchid`='".$info['mactionid']."',`time`='".$info['time_munite']."',`action`='".$info['action']."',`player`='".$info['player']."',`assist_player`='".$info['assist_by']."',`actionfor`='".$info['action_for']."',`htscore`='".$info['halftime_score']."',`scorecard`='".$info['fulltime_score']."'";		
 		$f = $this->db->query($sql);
-        
+
 		$sql2 = "UPDATE `schedule` SET `htscore`='".$info['halftime_score']."', `ftscore`='".$info['fulltime_score']."' WHERE `matchid`='".$info['cmatchid']."'";
+                $f2 = $this->db->query($sql2);
+                
 		if($f && $f2) return TRUE;
 
 	}
